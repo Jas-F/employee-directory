@@ -2,6 +2,8 @@
 import React from "react";
 /* Import css to style components */
 import "./search.css"
+// import bootstrap from react
+import {Form} from "react";
 
 // add search form function
 function Search() {

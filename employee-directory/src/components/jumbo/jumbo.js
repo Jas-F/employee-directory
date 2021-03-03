@@ -4,6 +4,8 @@ import React from "react";
 /* Import css to style components */
 import "./jumbo.css";
 
+// import bootstrap
+import {Jumbotron, Container} from "react";
 // create function to return jumbo bootstrap
 function Jumbo() {
     return (
