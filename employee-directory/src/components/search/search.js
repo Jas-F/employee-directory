@@ -4,3 +4,10 @@ import React from "react";
 import "./search.css"
 
 // add search form function
+function Search() {
+    return (
+
+    )
+}
+
+export default Search;
