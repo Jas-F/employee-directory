@@ -5,7 +5,7 @@ import React from "react";
 import "./jumbo.css";
 
 // import bootstrap
-import {Jumbotron, Container} from "react";
+import {Jumbotron, Container} from "react-bootstrap";
 // create function to return jumbo bootstrap
 function Jumbo() {
     return (

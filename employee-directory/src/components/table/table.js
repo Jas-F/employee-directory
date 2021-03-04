@@ -4,8 +4,12 @@ import React from "react";
 /* Import css to style components */
 import "./table.css";
 
+// import bootrapp
+import Table from "react-bootstrap/Table"
+
 // create table function
-function Table() {
+// change table function name to resolve name conflict
+function MyTable() {
     return (
         <Table striped bordered hover variant="dark">
             <thead>
@@ -31,4 +35,4 @@ function Table() {
     )
 }
 
-export default Table;
+export default MyTable;

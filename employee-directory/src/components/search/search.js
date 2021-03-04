@@ -3,7 +3,8 @@ import React from "react";
 /* Import css to style components */
 import "./search.css"
 // import bootstrap from react
-import {Form} from "react";
+// change rect bootstrap documentation 
+import Form from "react-bootstrap/Form";
 
 // add search form function
 function Search() {

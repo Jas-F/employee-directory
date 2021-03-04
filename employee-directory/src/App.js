@@ -2,14 +2,17 @@
 // 1a. build  jumbo component to display title and sub title
 // 1b. build  form component to search employee by name
 // 1c. build  table component to display employee data base
-
+import React from "react";
+// import react bootstrap for components
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 // import jumbo component
-import Jumbo from "./components/jumbo/jumbo.js";
-// import search component
-import Search from "./components/search/search.js";
-// import table component
-import Table from "./components/table/table.js";
+import Jumbo from "./components/Jumbo/Jumbo";
+// // // import search component
+import Search from "./components/Search/Search.js";
+// // // import table component
+import MyTable from "./components/Table/Table.js";
+
 
 function App() {
   return (
@@ -17,9 +20,9 @@ function App() {
     <div className="App">
       <Jumbo />
       <Search />
-      <Table />
+      <MyTable />
     </div>
-  );
+  )
 }
 
 export default App;
