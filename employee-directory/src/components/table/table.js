@@ -11,7 +11,7 @@ import Table from "react-bootstrap/Table"
 // change table function name to resolve name conflict
 
 // 2. Manage components state 
-// 2a. change component function myTable to class my table to add functionality allowing for render of table
+// 2a. change component function myTable to class my table to add functionality ES6 allowing for render of table
 // 2b. Add constructor to assign object to this.state/assign initial state as an empty string before API is loaded
 // 2c. Add componentDidMount to to create api call fetch random user API and declare new state
 // 2d. Use render method to produce output
@@ -36,9 +36,24 @@ class MyTable extends React.Component() {
     }
 
     // fetching api and setting a new state
+    // git 25users with the nationality of us
+    componentDidMount() {
 
-    
-    
+        fetch('https://randomuser.me/api/?results=25?nat=us')
+            // convert the results to json
+            .then(res => res.json())
+            // set new state with updated items object with api data
+            // set is loaded to true indicating that the api has loaded properly
+            .then(json => {
+            this.setState({
+                isLoaded: true,
+                items: json,
+            })
+                console.log(items)
+            });
+    }
+ 
+    render() {
     
     return (
         <Table striped bordered hover variant="dark">
@@ -64,6 +79,6 @@ class MyTable extends React.Component() {
         </Table>
 
     )
-}
+}}
 
 export default MyTable;
