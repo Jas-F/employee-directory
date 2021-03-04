@@ -21,7 +21,22 @@ import Table from "react-bootstrap/Table"
 // 3b. Create a new state for sorted field
 // 3c. make the state empty so it can be set when onlick function is triggered in button
 // 3d. Create if statement that will sort all names into ascending or descending order
-class App extends React.Component() {
+class MyTable extends React.Component() {
+
+    constructor(props) {
+        // identify props are the parent
+        super(props);
+        // set state as a new object items as an array
+        this.state = {
+            items: [],
+            // noting that the array has not been loaded with data
+            isLoaded: false,
+        }
+
+    }
+
+    // fetching api and setting a new state
+
     
     
     
