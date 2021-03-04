@@ -7,6 +7,7 @@ import "./search.css"
 import Form from "react-bootstrap/Form";
 
 // add search form function
+
 function Search() {
     return (
 <Form.Group>
