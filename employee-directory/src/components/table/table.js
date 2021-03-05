@@ -28,7 +28,7 @@ class MyTable extends React.Component {
     constructor(props) {
         super(props);
         this.state =.Component {
-            user: null,
+            employee: null,
         };
     }
     
@@ -41,7 +41,7 @@ class MyTable extends React.Component {
             .then(res => {
                 const employee = res.data;
                 // set new state with loaded api
-                this.setState({ employee })
+                this.setState({ employee: employee })
                 console.log(employee);
             })
 
