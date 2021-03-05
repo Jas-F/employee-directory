@@ -30,50 +30,51 @@ class MyTable extends React.Component {
     }
 
     // git 25users with the nationality of us using get method
-   
+
     componentDidMount() {
 
         axios.get("https://randomuser.me/api/?results=25")
-        .then(res =>{
-            const user = res.data;
-            // set new state with loaded api
-            this.setState({ user })
-            console.log(user);
-        })
+            .then(res => {
+                const employee = res.data;
+                // set new state with loaded api
+                this.setState({ employee })
+                console.log(employee);
+            })
 
     }
- 
+
     render() {
         // grab data from state
-    return (
-        <Table striped bordered hover variant="dark">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>DOB</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                 
-                 
+        return (
+            <Table striped bordered hover variant="dark">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>DOB</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+{/* map through employee data and render inside each */}
                         <td>image placeholder</td>
-                        <td>item.name</td>
-                        <td>name placeholder</td>
+                        <td>{this.state.name}</td>
                         <td>phone placeholder</td>
                         <td>email placeholder</td>
                         <td>DOB placeholder</td>
-                   
-                    
-                   
-                </tr>
-            </tbody>
-        </Table>
 
-    )}}
+
+
+                    </tr>
+                </tbody>
+            </Table>
+
+        )
+    }
+}
 
 
 export default MyTable;
