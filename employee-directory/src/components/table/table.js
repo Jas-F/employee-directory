@@ -23,7 +23,7 @@ import Table from "react-bootstrap/Table";
 // 3b. Create a new state for sorted field
 // 3c. make the state empty so it can be set when onlick function is triggered in button
 // 3d. Create if statement that will sort all names into ascending or descending order
-class MyTable extends React.Component() {
+class MyTable extends React.Component {
     // set new sate empty array names user
     state = {
         user: []
@@ -71,40 +71,39 @@ class MyTable extends React.Component() {
 
     }
  
-//     render() {
-//         // grab data from state
-//         const {isLoaded, items } = this.state;
+    render() {
+        // grab data from state
+        // const {isLoaded, items } = this.state;
 
-//     return (
-//         <Table striped bordered hover variant="dark">
-//             <thead>
-//                 <tr>
-//                     <th>Image</th>
-//                     <th>Name</th>
-//                     <th>Phone</th>
-//                     <th>Email</th>
-//                     <th>DOB</th>
-//                 </tr>
-//             </thead>
-//             <tbody>
-//                 <tr>
-// {/*                     
-//                     {items.map(items => (
-//                         <td>image placeholder</td>
-//                         <td>(item.name</td>
-//                         <td>name placeholder</td>
-//                         <td>phone placeholder</td>
-//                         <td>email placeholder</td>
-//                         <td>DOB placeholder</td>
-//                     ))} */}
+    return (
+        <Table striped bordered hover variant="dark">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>DOB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                 
+                 
+                        <td>image placeholder</td>
+                        <td>item.name</td>
+                        <td>name placeholder</td>
+                        <td>phone placeholder</td>
+                        <td>email placeholder</td>
+                        <td>DOB placeholder</td>
+                   
                     
                    
-//                 </tr>
-//             </tbody>
-//         </Table>
+                </tr>
+            </tbody>
+        </Table>
 
-//     )
-// }}
-}
+    )}}
+
 
 export default MyTable;
