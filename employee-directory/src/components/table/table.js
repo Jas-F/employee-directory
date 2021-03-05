@@ -2,7 +2,7 @@
 import React from "react";
 
 // import axios
-
+import axios from 'axios';
 /* Import css to style components */
 import "./table.css";
 
