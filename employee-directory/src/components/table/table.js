@@ -24,6 +24,10 @@ import Table from "react-bootstrap/Table";
 // 3c. make the state empty so it can be set when onlick function is triggered in button
 // 3d. Create if statement that will sort all names into ascending or descending order
 class MyTable extends React.Component() {
+    // set new sate empty array names user
+    state = {
+        user: []
+    }
 
     constructor(props) {
         // identify props are the parent
