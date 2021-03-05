@@ -1,19 +1,21 @@
 /* Import react */
 import React from "react";
 
+// import axios
+
 /* Import css to style components */
 import "./table.css";
 
 // import bootstrap
-import Table from "react-bootstrap/Table"
+import Table from "react-bootstrap/Table";
 
 // create table function
 // change table function name to resolve name conflict
 
-// 2. Manage components state 
+// 2. Render random user api data into table
 // 2a. change component function myTable to class my table to add functionality ES6 allowing for render of table
-// 2b. Add constructor to assign object to this.state/assign initial state as an empty string before API is loaded
-// 2c. Add componentDidMount to set new state with loaded api
+// 2b. set original state 
+// 2c. Add componentDidMount to set new state with api data
 // 2d. Use render method to produce output
 // 2e. Render API Data into the table using this.state
 // 3 Make table sortable
@@ -39,18 +41,25 @@ class MyTable extends React.Component() {
     // git 25users with the nationality of us
     componentDidMount() {
 
-        fetch('https://randomuser.me/api/?results=25?nat=us')
-            // convert the results to json
-            .then(res => res.json())
-            // set new state with updated items object with api data
-            // set is loaded to true indicating that the api has loaded properly
-            .then(json => {
-            this.setState({
-                isLoaded: true,
-                items: json,
-            })
-                console.log(items)
-            });
+        // fetch('https://randomuser.me/api/?results=25?nat=us')
+        //     // convert the results to json
+        //     .then(res => res.json())
+        //     // set new state with updated items object with api data
+        //     // set is loaded to true indicating that the api has loaded properly
+        //     .then(json => {
+        //     this.setState({
+        //         isLoaded: true,
+        //         items: json,
+        //     })
+        //         console.log(items)
+        //     });
+        // get data from api url
+        const api = "https://randomuser.me/api/?results=25?nat=us";
+        const fetch = fetch(api);
+        const data = fetch.json();
+        console.log(data);
+
+
     }
  
     render() {
@@ -70,7 +79,7 @@ class MyTable extends React.Component() {
             </thead>
             <tbody>
                 <tr>
-                    
+{/*                     
                     {items.map(items => (
                         <td>image placeholder</td>
                         <td>(item.name</td>
@@ -78,7 +87,7 @@ class MyTable extends React.Component() {
                         <td>phone placeholder</td>
                         <td>email placeholder</td>
                         <td>DOB placeholder</td>
-                    ))}
+                    ))} */}
                     
                    
                 </tr>
