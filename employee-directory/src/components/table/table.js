@@ -29,52 +29,22 @@ class MyTable extends React.Component {
         user: []
     }
 
-    // constructor(props) {
-    //     // identify props are the parent
-    //     super(props);
-    //     // set state as a new object items as an array
-    //     this.state = {
-    //         items: [],
-    //         // noting that the array has not been loaded with data
-    //         isLoaded: false,
-    //     }
-
-    // }
-
-    // fetching api and setting a new state
-    // git 25users with the nationality of us
+    // git 25users with the nationality of us using get method
+   
     componentDidMount() {
 
-        // fetch('https://randomuser.me/api/?results=25?nat=us')
-        //     // convert the results to json
-        //     .then(res => res.json())
-        //     // set new state with updated items object with api data
-        //     // set is loaded to true indicating that the api has loaded properly
-        //     .then(json => {
-        //     this.setState({
-        //         isLoaded: true,
-        //         items: json,
-        //     })
-        //         console.log(items)
-        //     });
-        // get data from api url
-        // const url = "https://randomuser.me/api/?results=25?nat=us";
-        // get data from url
-        axios.get("https://randomuser.me/api/?results=25?nat=us")
+        axios.get("https://randomuser.me/api/?results=25")
         .then(res =>{
             const user = res.data;
+            // set new state with loaded api
+            this.setState({ user })
             console.log(user);
         })
-  
-
-
 
     }
  
     render() {
         // grab data from state
-        // const {isLoaded, items } = this.state;
-
     return (
         <Table striped bordered hover variant="dark">
             <thead>
