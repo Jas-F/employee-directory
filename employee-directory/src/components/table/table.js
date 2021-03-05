@@ -29,17 +29,17 @@ class MyTable extends React.Component() {
         user: []
     }
 
-    constructor(props) {
-        // identify props are the parent
-        super(props);
-        // set state as a new object items as an array
-        this.state = {
-            items: [],
-            // noting that the array has not been loaded with data
-            isLoaded: false,
-        }
+    // constructor(props) {
+    //     // identify props are the parent
+    //     super(props);
+    //     // set state as a new object items as an array
+    //     this.state = {
+    //         items: [],
+    //         // noting that the array has not been loaded with data
+    //         isLoaded: false,
+    //     }
 
-    }
+    // }
 
     // fetching api and setting a new state
     // git 25users with the nationality of us
@@ -58,47 +58,53 @@ class MyTable extends React.Component() {
         //         console.log(items)
         //     });
         // get data from api url
-        const api = "https://randomuser.me/api/?results=25?nat=us";
-        const fetch = fetch(api);
-        const data = fetch.json();
-        console.log(data);
+        // const url = "https://randomuser.me/api/?results=25?nat=us";
+        // get data from url
+        axios.get("https://randomuser.me/api/?results=25?nat=us")
+        .then(res =>{
+            const user = res.data;
+            console.log(user);
+        })
+  
+
 
 
     }
  
-    render() {
-        // grab data from state
-        const {isLoaded, items } = this.state;
+//     render() {
+//         // grab data from state
+//         const {isLoaded, items } = this.state;
 
-    return (
-        <Table striped bordered hover variant="dark">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Email</th>
-                    <th>DOB</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-{/*                     
-                    {items.map(items => (
-                        <td>image placeholder</td>
-                        <td>(item.name</td>
-                        <td>name placeholder</td>
-                        <td>phone placeholder</td>
-                        <td>email placeholder</td>
-                        <td>DOB placeholder</td>
-                    ))} */}
+//     return (
+//         <Table striped bordered hover variant="dark">
+//             <thead>
+//                 <tr>
+//                     <th>Image</th>
+//                     <th>Name</th>
+//                     <th>Phone</th>
+//                     <th>Email</th>
+//                     <th>DOB</th>
+//                 </tr>
+//             </thead>
+//             <tbody>
+//                 <tr>
+// {/*                     
+//                     {items.map(items => (
+//                         <td>image placeholder</td>
+//                         <td>(item.name</td>
+//                         <td>name placeholder</td>
+//                         <td>phone placeholder</td>
+//                         <td>email placeholder</td>
+//                         <td>DOB placeholder</td>
+//                     ))} */}
                     
                    
-                </tr>
-            </tbody>
-        </Table>
+//                 </tr>
+//             </tbody>
+//         </Table>
 
-    )
-}}
+//     )
+// }}
+}
 
 export default MyTable;
