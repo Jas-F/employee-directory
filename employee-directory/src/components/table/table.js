@@ -24,10 +24,14 @@ import Table from "react-bootstrap/Table";
 // 3c. make the state empty so it can be set when onlick function is triggered in button
 // 3d. Create if statement that will sort all names into ascending or descending order
 class MyTable extends React.Component {
-    // set new sate empty array names user
-    state = {
-        user: []
+    // set new state to employee with  the value of an empty array
+    constructor(props) {
+        super(props);
+        this.state =.Component {
+            user: null,
+        };
     }
+    
 
     // git 25users with the nationality of us using get method
 
@@ -61,7 +65,7 @@ class MyTable extends React.Component {
 
 {/* map through employee data and render inside each */}
                         <td>image placeholder</td>
-                        <td>{this.state.name}</td>
+                        <td>{this.state.results.name}</td>
                         <td>phone placeholder</td>
                         <td>email placeholder</td>
                         <td>DOB placeholder</td>
