@@ -27,7 +27,7 @@ class MyTable extends React.Component {
     // set new state to employee with  the value of an empty array
     constructor(props) {
         super(props);
-        this.state =.Component {
+        this.state = {
             employee: null,
         };
     }
