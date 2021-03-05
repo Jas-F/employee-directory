@@ -40,9 +40,9 @@ class MyTable extends React.Component {
         axios.get("https://randomuser.me/api/?results=25")
             .then(res => {
                 const employee = res.data;
-                // set new state with loaded api
+                // set new state to value of employee with the loaded api
                 this.setState({ employee: employee })
-                console.log(employee);
+                console.log(this.state);
             })
 
     }
@@ -63,9 +63,9 @@ class MyTable extends React.Component {
                 <tbody>
                     <tr>
 
-{/* map through employee data and render inside each */}
+{/*render api data through state*/}
                         <td>image placeholder</td>
-                        <td>{this.state.results.name}</td>
+                        <td>{this.state.data.employee}</td>
                         <td>phone placeholder</td>
                         <td>email placeholder</td>
                         <td>DOB placeholder</td>
