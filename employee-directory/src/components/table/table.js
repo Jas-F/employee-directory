@@ -64,13 +64,15 @@ class MyTable extends React.Component {
                 <tbody>
                     {/* map through employee array */}
                     {
-                        this.state.employees.map( item => {
+                        this.state.employees.map(item => {
                             return (
                                 <tr>
-                                    <td>{item.picture.thumbnail}</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    {/* use dot notation to render image use img tag to display img */}
+                                    <td><img src= {item.picture.thumbnail}></img></td>
+                                    <td>{item.name.first} {item.name.last}</td>
+                                    <td>{item.phone}</td>
+                                    <td>{item.email}</td>
+                                    <td>{item.dob.date}</td>
                                 </tr>
                             )
                         })
