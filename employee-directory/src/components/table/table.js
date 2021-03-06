@@ -77,15 +77,7 @@ class MyTable extends React.Component {
                             )
                         })
                     }
-                    <tr>
-
-                        {/*render api data through state*/}
-                        <td>image placeholder</td>
-                        {/* <td>{this.state.employee}</td> */}
-                        <td>phone placeholder</td>
-                        <td>email placeholder</td>
-                        <td>DOB placeholder</td>
-                    </tr>
+                 
                 </tbody>
             </Table>
 
