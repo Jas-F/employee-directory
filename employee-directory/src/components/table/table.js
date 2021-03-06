@@ -62,6 +62,19 @@ class MyTable extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
+                    {/* map through employee array */}
+                    {
+                        this.state.employees.map( item => {
+                            return (
+                                <tr>
+                                    <td>{item.picture.thumbnail}</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            )
+                        })
+                    }
                     <tr>
 
                         {/*render api data through state*/}
