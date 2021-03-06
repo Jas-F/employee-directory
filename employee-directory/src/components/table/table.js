@@ -49,10 +49,28 @@ class MyTable extends React.Component {
     }
 
     render() {
+        // get search input from props
+        const searchTerm = this.props.searchInput
+        // filter table bases off search term
+        let dataToDisplay = this.state.employees.slice()
+        // with copy of state create conditional if there is a search term 
+        // json the data in order to search for characters that match the search input
+        // create if statement to sort data
+        if (searchTerm) {
+            dataToDisplay = dataToDisplay.filter(item => {
+                const jsonString = JSON.stringify(item)
+                return (
+                    jsonString.includes(searchTerm)
+                )
+            })
+        }
         // grab data from state
         return (
             <Table striped bordered hover variant="dark">
                 <thead>
+                    {/* create onclick for header
+                    Store the name as a var / state 
+                     */}
                     <tr>
                         <th>Image</th>
                         <th>Name</th>
@@ -64,11 +82,12 @@ class MyTable extends React.Component {
                 <tbody>
                     {/* map through employee array */}
                     {
-                        this.state.employees.map(item => {
+                        // add data to display to filter data comming in
+                        dataToDisplay.map(item => {
                             return (
                                 <tr>
                                     {/* use dot notation to render image use img tag to display img */}
-                                    <td><img src= {item.picture.thumbnail}></img></td>
+                                    <td><img src={item.picture.thumbnail}></img></td>
                                     <td>{item.name.first} {item.name.last}</td>
                                     <td>{item.phone}</td>
                                     <td>{item.email}</td>
@@ -77,7 +96,7 @@ class MyTable extends React.Component {
                             )
                         })
                     }
-                 
+
                 </tbody>
             </Table>
 

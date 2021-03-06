@@ -2,7 +2,7 @@
 // 1a. build  jumbo component to display title and sub title
 // 1b. build  form component to search employee by name
 // 1c. build  table component to display employee data base
-import React, {useState} from "react";
+import React, { useState } from "react";
 // import react bootstrap for components
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -17,6 +17,7 @@ import MyTable from "./components/Table/Table.js";
 // change state to search value input through call back function
 // pass search value to table 
 // use search value as filter
+// pass value of new state to table
 
 // use use state to import search value
 // create react hook for search value
@@ -27,8 +28,8 @@ function App() {
     // display UI from components
     <div className="App">
       <Jumbo />
-      <Search setSearchInput={setSearchInput}/>
-      <MyTable />
+      <Search setSearchInput={setSearchInput} />
+      <MyTable searchInput={searchInput} />
     </div>
   )
 }
