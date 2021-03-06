@@ -28,10 +28,11 @@ class MyTable extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            employee: null,
+            // use empty array
+            employees: [],
         };
     }
-    
+
 
     // git 25users with the nationality of us using get method
 
@@ -39,9 +40,9 @@ class MyTable extends React.Component {
 
         axios.get("https://randomuser.me/api/?results=25")
             .then(res => {
-                const employee = res.data;
+                const employees = res.data.results;
                 // set new state to value of employee with the loaded api
-                this.setState({ employee: employee })
+                this.setState({ employees: employees })
                 console.log(this.state);
             })
 
@@ -63,15 +64,12 @@ class MyTable extends React.Component {
                 <tbody>
                     <tr>
 
-{/*render api data through state*/}
+                        {/*render api data through state*/}
                         <td>image placeholder</td>
-                        <td>{this.state.results.name}</td>
+                        {/* <td>{this.state.employee}</td> */}
                         <td>phone placeholder</td>
                         <td>email placeholder</td>
                         <td>DOB placeholder</td>
-
-
-
                     </tr>
                 </tbody>
             </Table>
