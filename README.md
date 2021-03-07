@@ -73,7 +73,7 @@
 
 ## Deployed Link
 
-* [See Live Site](https://portfolio04.herokuapp.com/)
+* [See Live Site](https://jas-f.github.io/employee-directory/)
 
 ## License
 
