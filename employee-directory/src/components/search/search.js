@@ -15,7 +15,7 @@ function Search(props) {
     <Form.Control size="sm" type="text" placeholder="search" onChange={ (e)=> {
         const val = e.target.value
         props.setSearchInput(val)
-    }}/>s
+    }}/>
 </Form.Group>
     )
 }
