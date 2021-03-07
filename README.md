@@ -1,103 +1,70 @@
-# Employee Directory
- create a employee directory with React. Break up your application's UI into components, manage component state, and respond to user events.
-<br>
-===========
-![Image](employeedir.png)
+# Getting Started with Create React App
 
-<br>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Render api data
+## Available Scripts
 
-```
-     <tbody>
-                    {/* map through employee array */}
-                    {
-                        // add data to display to filter data comming in
-                        dataToDisplay.map(item => {
-                            return (
-                                <tr>
-                                    {/* use dot notation to render image use img tag to display img */}
-                                    <td><img src={item.picture.thumbnail}></img></td>
-                                    <td>{item.name.first} {item.name.last}</td>
-                                    <td>{item.phone}</td>
-                                    <td>{item.email}</td>
-                                    <td>{item.dob.date}</td>
-                                </tr>
-                            )
-                        })
-                    }
+In the project directory, you can run:
 
-                </tbody>
-```
-<br>
+### `yarn start`
 
-## Search table by name
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```
-   if (searchTerm) {
-            dataToDisplay = dataToDisplay.filter(item => {
-                const jsonString = JSON.stringify(item)
-                return (
-                    jsonString.includes(searchTerm)
-                )
-            })
-        }
-```
-<br>
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Build webpage using react UI
+### `yarn test`
 
-```
- function App() {
-  const [searchInput, setSearchInput] = useState("")
-  console.log(searchInput)
-  return (
-    // display UI from components
-    <div className="App">
-      <Jumbo />
-      <Search setSearchInput={setSearchInput} />
-      <MyTable searchInput={searchInput} />
-    </div>
-  )
-}
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<br>
+### `yarn build`
 
-## Built With
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [Bootstrap](https://getbootstrap.com/)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Deployed Link
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-* [See Live Site](https://jas-f.github.io/employee-directory/)
+### `yarn eject`
 
-## License
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-This project is licensed under the MIT License 
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## Prerequisites
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Git hub,
-Git lab,
-Git bash,
-Visual studio,
-Google chrome,
-Bootstrap,
-JavaScript,
-JQuery
+## Learn More
 
-## Authors
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-**Jasmine Franklin C: 301-332-2313 E: jasminer.franklin@gmail** 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- [Link to Portfolio Site](https://jas-f.github.io/portfolio-3.0/)
-- [Link to Github](https://github.com/)
-- [Link to LinkedIn](https://www.linkedin.com/in/jasmine-franklin-8b08ba121)
+### Code Splitting
 
-<p>&copy; UC Berkeley Extension Bootcamp.</p>
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
