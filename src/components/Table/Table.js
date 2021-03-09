@@ -48,6 +48,15 @@ class MyTable extends React.Component {
 
     }
 
+    // create sort array 
+    // make new array
+    // sort by laat name
+    sortArray() {
+       let sortedArray = this.state.employees.sort((a, b) => {
+
+       })
+    }
+
     render() {
         // get search input from props
         const searchTerm = this.props.searchInput
@@ -75,7 +84,9 @@ class MyTable extends React.Component {
                         {/* create on click on name
                         when clicked perform a sort function */}
                         <th>Image</th>
-                        <th>Name</th>
+                        <th onClick = {
+                            this.sortArray()
+                        }>Name</th>
                         <th>Phone</th>
                         <th>Email</th>
                         <th>DOB</th>
