@@ -72,6 +72,8 @@ class MyTable extends React.Component {
                     Store the name as a var / state 
                      */}
                     <tr>
+                        {/* create on click on name
+                        when clicked perform a sort function */}
                         <th>Image</th>
                         <th>Name</th>
                         <th>Phone</th>
