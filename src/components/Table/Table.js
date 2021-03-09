@@ -87,7 +87,7 @@ class MyTable extends React.Component {
                             return (
                                 <tr>
                                     {/* use dot notation to render image use img tag to display img */}
-                                    <td><img src={item.picture.thumbnail}></img></td>
+                                    <td><img src={item.picture.thumbnail} ></img></td>
                                     <td>{item.name.first} {item.name.last}</td>
                                     <td>{item.phone}</td>
                                     <td>{item.email}</td>
