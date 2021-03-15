@@ -48,16 +48,35 @@ class MyTable extends React.Component {
 
     }
 
-    // create sort array 
-    // make new array
-    // sort by laat name
-    sortArray() {
-       let sortedArray = this.state.employees.sort((a, b) => {
-
-       })
-    }
+   
 
     render() {
+
+         // create sort array 
+    // make new array
+    // sort by laat name
+    // reference https://www.javascripttutorial.net/array/javascript-sort-an-array-of-objects/
+    // function sortArray() {
+    //     let sortedArray = this.state.employees.sort((a, b) => {
+    //      //    store last name from object
+    //          let lasta = a.name.last.toLowerCase(),
+ 
+    //              lastb = b.name.last.toLowerCase();
+ 
+    //              // conditional statement that sort name by last  name decending and a ascending
+ 
+    //              if (lasta < lastb) {
+    //                  return -1;
+    //              }
+    //              if (lasta > lastb) {
+    //                  return 1;
+    //              }
+    //              return 0;
+     
+    //     })
+    //  //    reset state to sorted array
+    //     this.setState({employees: sortedArray})
+    //  }
         // get search input from props
         const searchTerm = this.props.searchInput
         // filter table bases off search term
@@ -84,9 +103,7 @@ class MyTable extends React.Component {
                         {/* create on click on name
                         when clicked perform a sort function */}
                         <th>Image</th>
-                        <th onClick = {
-                            this.sortArray()
-                        }>Name</th>
+                        <th >Name</th>
                         <th>Phone</th>
                         <th>Email</th>
                         <th>DOB</th>
